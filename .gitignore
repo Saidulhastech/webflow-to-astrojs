@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+output-*/
+tw4build/
+astro-*/dist/
+
+# Archives / zips
+*.zip
+
+# Backup files
+*.bak
+prolio.webflow.local-backup/
+
+# Generated data dumps
+cms-dump.json
+
+# Editor
+.vscode/

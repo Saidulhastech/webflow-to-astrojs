@@ -1,0 +1,37 @@
+{
+  "name": "webflow-to-astro",
+  "version": "1.0.0",
+  "description": "Webflow export → Astro pipeline (HTML → Tailwind v4 → Astro 5 with content collections)",
+  "main": "build.js",
+  "scripts": {
+    "clean": "node -e \"const fs=require('fs');const cfg=JSON.parse(fs.readFileSync('project.config.json','utf8'));for(const d of ['output-'+cfg.name+'-tailwind-v4','astro-'+cfg.name+'/dist'])fs.rmSync(d,{recursive:true,force:true});console.log('cleaned build outputs for',cfg.name)\"",
+    "pipeline":     "npm run clean && npm run fetch && npm run maps && npm run tw && npm run post && npm run astro && npm run optimize && npm run astro:build",
+    "pipeline:dev": "npm run clean && npm run fetch && npm run maps && npm run tw && npm run post && npm run astro && npm run optimize && npm run astro:dev",
+    "build": "node build.js",
+    "dev": "node build.js --dev",
+    "build:fast": "node build.js --skip-fetch",
+    "dev:fast": "node build.js --skip-fetch --dev",
+    "build:no-astro": "node build.js --no-build",
+    "fetch": "node build.js --only=fetch",
+    "maps": "node build.js --only=maps",
+    "tw": "node build.js --only=tw",
+    "post": "node build.js --only=post",
+    "astro": "node build.js --only=astro",
+    "optimize": "node build.js --only=optimize",
+    "astro:build": "node build.js --only=astrobuild",
+    "astro:dev": "node build.js --only=astrodev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "autoprefixer": "^10.5.0",
+    "cheerio": "^1.2.0",
+    "postcss": "^8.5.12",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.4",
+    "ttf2woff2": "^6.0.1"
+  }
+}

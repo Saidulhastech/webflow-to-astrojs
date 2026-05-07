@@ -1,0 +1,20 @@
+/* Tailwind v4 — theme + utilities only (no preflight).
+   Webflow's normalize + webflow.css + site CSS supply the base layer. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  /* Webflow desktop-first breakpoints in rem (so max-* variants generate). */
+  --breakpoint-sm: initial;
+  --breakpoint-md: initial;
+  --breakpoint-lg: initial;
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+
+  --breakpoint-sm: 29.9375rem;   /* 479px */
+  --breakpoint-md: 47.9375rem;   /* 767px */
+  --breakpoint-lg: 61.9375rem;   /* 991px */
+  --breakpoint-xl: 80rem;        /* 1280px */
+  --breakpoint-2xl: 90rem;       /* 1440px */
+  --breakpoint-3xl: 120rem;      /* 1920px */
+}

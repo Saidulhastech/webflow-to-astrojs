@@ -1,0 +1,45 @@
+{
+  "name": "saaft",
+  "site": "https://illuspro.com",
+  "title": "illuspro — Illustrator Portfolio",
+  "description": "illuspro is a modern illustrator portfolio template for showcasing services, projects, blog articles, and creative work.",
+  "skipPaths": [
+    "/template-info/"
+  ],
+  "homePromote": "home/home-one",
+  "extraPages": [
+    "/401",
+    "/404"
+  ],
+  "lcpClasses": [
+    "home-one-hero-image",
+    "home-two-hero-image",
+    "about-hero-image"
+  ],
+  "rebrand": {
+    "footerCredit": [
+      {
+        "fromUrl": "https://brandbes.com/",
+        "fromText": "Brandbes",
+        "toUrl": "https://hasthemes.com/",
+        "toText": "Hasthemes"
+      },
+      {
+        "fromUrl": "https://brandbes.com/",
+        "fromText": "Webflow",
+        "toUrl": "https://astro.build/",
+        "toText": "Astro"
+      }
+    ]
+  },
+  "social": {
+    "twitter": "@illuspro",
+    "ogImage": "/assets/images/og-default.webp"
+  },
+  "contactForm": {
+    "action": "https://formspree.io/f/your-form-id"
+  },
+  "keepWebflowJs": true,
+  "uiScript": "/assets/js/site-ui.js",
+  "loadJquery": true
+}
